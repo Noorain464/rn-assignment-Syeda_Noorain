@@ -43,6 +43,7 @@ npx expo start
 
 | Package | Purpose |
 | :--- | :--- |
+| **expo-router** | File-based routing and navigation |
 | **nativewind** | Tailwind CSS styling for React Native |
 | **tailwindcss** | Utility CSS engine |
 | **react-native-markdown-display** | Renders the markdown content in Preview mode |
@@ -59,3 +60,10 @@ npx expo start
   └── Toolbar.tsx      # Toggle buttons & Word count
 \`\`\`
 
+## Known Issues & Fixes
+
+**"Couldn't find a navigation context" Error**
+
+If you encounter this error when clicking buttons, it is due to a conflict between **NativeWind** and **Expo Router** when using conditional classes (e.g., \`className={isActive ? 'shadow-sm' : ''}\`) on interactive elements.
+
+**Fix:** Use the \`style\` prop for dynamic styles (like shadows or opacity changes) instead of \`className\` for \`TouchableOpacity\` or \`Pressable\` components.
