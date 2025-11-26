@@ -1,50 +1,61 @@
-# Welcome to your Expo app 👋
+# MarkNote — Simple Notes App with Markdown Preview
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A minimal, dual-mode notes app built with **React Native**, **Expo Router**, and **NativeWind**. It allows users to edit notes in markdown and toggle to a rendered preview.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **Editor Mode:** distraction-free text input with multiline support.
+- **Preview Mode:** Renders markdown (Bold, Italic, Lists, Headers) using `react-native-markdown-display`.
+- **Word Count:** Real-time word tracking.
+- **NativeWind Styling:** Utility-first CSS styling for React Native components.
 
-   ```bash
-   npm install
-   ```
+## Prerequisites
 
-2. Start the app
+- **Node.js** (LTS version recommended)
+- **npm** or **yarn**
+- **Expo Go** app installed on your physical device (iOS/Android) OR an Android/iOS Simulator.
 
-   ```bash
-   npx expo start
-   ```
+## Installation
 
-In the output, you'll find options to open the app in a
+1. Clone or download the repository.
+2. Navigate to the project directory.
+3. Install dependencies:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+\`\`\`bash
+npm install
+# or
+yarn install
+\`\`\`
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Running the App
 
-## Get a fresh project
+Start the Expo development server:
 
-When you're ready, run:
+\`\`\`bash
+npx expo start
+\`\`\`
 
-```bash
-npm run reset-project
-```
+- **Scan the QR code** with your phone's camera (iOS) or the Expo Go app (Android).
+- **Press \`i\`** to open in the iOS Simulator (Mac only).
+- **Press \`a\`** to open in the Android Emulator.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Key Dependencies
 
-## Learn more
+| Package | Purpose |
+| :--- | :--- |
+| **nativewind** | Tailwind CSS styling for React Native |
+| **tailwindcss** | Utility CSS engine |
+| **react-native-markdown-display** | Renders the markdown content in Preview mode |
 
-To learn more about developing your project with Expo, look at the following resources:
+## Project Structure
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+\`\`\`text
+/app
+  ├── _layout.tsx      # Root layout (Navigation setup)
+  └── index.tsx        # Main screen logic
+/components
+  ├── Editor.tsx       # Text input component
+  ├── Preview.tsx      # Markdown rendering component
+  └── Toolbar.tsx      # Toggle buttons & Word count
+\`\`\`
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
